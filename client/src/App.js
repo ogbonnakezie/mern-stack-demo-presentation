@@ -77,30 +77,32 @@ class App extends React.Component {
     //JSX
     return (
       <div className="app">
-        <h2>Welcome to My React App</h2>
-        <form onSubmit={this.submit}>
-          <div className="form-input">
-            <input
-              type="text"
-              name="title"
-              value={this.state.title}
-              placeholder="Enter your Title"
-              onChange={this.handleChange}
-            />{" "}
-          </div>
-          <div className="form-input">
-            <textarea
-              name="body"
-              value={this.state.body}
-              cols="30"
-              rows="10"
-              onChange={this.handleChange}
-              placeholder="body"
-            ></textarea>
-          </div>
+        <h2>Welcome to My React App </h2>
+        <center>
+          <form onSubmit={this.submit}>
+            <div className="form-input">
+              <input
+                type="text"
+                name="title"
+                value={this.state.title}
+                placeholder="Enter your title"
+                onChange={this.handleChange}
+              />{" "}
+            </div>
+            <div className="form-input">
+              <textarea
+                name="body"
+                value={this.state.body}
+                cols="30"
+                rows="10"
+                onChange={this.handleChange}
+                placeholder="Write a message"
+              ></textarea>
+            </div>
 
-          <button>Submit</button>
-        </form>
+            <button>Submit</button>
+          </form>
+        </center>
         <div className="blog-">{this.displayBlogPost(this.state.posts)}</div>
       </div>
     );
